@@ -16,6 +16,7 @@ import show_attendance
 import takeImage
 import trainImage
 import automaticAttedance
+from rounded_button import RoundedButton
 
 # Modern Color Scheme
 COLORS = {
@@ -117,11 +118,12 @@ logo_title_frame.pack()
 
 # Logo
 logo = Image.open("UI_Image/VMark_Logo.png")
-logo = logo.resize((40, 40), Image.LANCZOS)
+logo = logo.resize((200, 120), Image.LANCZOS)
 logo1 = ImageTk.PhotoImage(logo)
 l1 = tk.Label(logo_title_frame, image=logo1, bg=COLORS['bg'])
 l1.pack(side=LEFT, padx=(0,10))
 
+"""
 # Title
 titl = tk.Label(
     logo_title_frame,
@@ -131,14 +133,15 @@ titl = tk.Label(
     font=("Helvetica Neue", 32, "bold"),
 )
 titl.pack(side=LEFT)
+"""
 
 # Welcome Text
 tk.Label(
     window,
-    text="Welcome to VMark",
+    text="Smart Way to Check In",
     bg=COLORS['bg'],
     fg=COLORS['text'],
-    font=("Helvetica Neue", 36, "bold"),
+    font=("Helvetica Neue", 24, "bold"),
 ).pack(pady=(40,60))
 
 # Main Content Frame
